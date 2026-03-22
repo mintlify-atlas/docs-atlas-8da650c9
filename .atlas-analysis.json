@@ -1,0 +1,71 @@
+{
+  "projectType": "api-service",
+  "projectName": "Docker StaticMaps",
+  "projectDescription": "A lightweight, Docker-ready REST API for generating static map images with markers, polygons, circles, polylines, and text overlays.",
+  "theme": "sequoia",
+  "primaryColor": "#94cb04",
+  "lightColor": "#545454",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "quickstart"]
+          },
+          {
+            "group": "Administration",
+            "pages": ["administration/installation", "administration/configuration"]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["api-reference/overview", "api-reference/parameters", "api-reference/basemap", "api-reference/attribution"]
+          },
+          {
+            "group": "Map Features",
+            "pages": [
+              "api-reference/markers",
+              "api-reference/circles",
+              "api-reference/polylines",
+              "api-reference/polygons",
+              "api-reference/text",
+              "api-reference/border"
+            ]
+          },
+          {
+            "group": "Examples",
+            "pages": ["api-reference/examples"]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Generate static map images via REST API (GET and POST)",
+    "Supports multiple basemaps: OpenStreetMap, Esri, Stamen, Carto, custom tile servers",
+    "Overlay markers, circles, polylines, polygons, and text on maps",
+    "Output formats: PNG, JPEG, WebP, PDF",
+    "Built-in tile and image caching for performance",
+    "Rate limiting per IP to protect against abuse",
+    "Optional API key authentication",
+    "Docker-ready with Docker Compose support",
+    "Interactive playground UI at root URL",
+    "Healthcheck endpoint at /health"
+  ],
+  "publicApiSurface": [
+    "GET /api/staticmaps - Generate a static map image",
+    "POST /api/staticmaps - Generate a static map image (body parameters)",
+    "GET /health - Healthcheck endpoint",
+    "GET / - Interactive playground UI",
+    "Parameters: center, zoom, width, height, format, basemap, tileUrl, markers, circle, polyline, polygon, text, border, attribution",
+    "Basemaps: osm, otm, streets, satellite, hybrid, topo, gray, hillshade, national-geographic, stamen-toner, stamen-watercolor, carto-light, carto-dark",
+    "Auth: x-api-key header or API_KEY query parameter"
+  ]
+}
